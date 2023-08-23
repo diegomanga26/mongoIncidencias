@@ -1,8 +1,8 @@
-import { collectionGen } from "../db/atlas.js";
+import { collGenerator } from "../db/atlas.js";
 
-class Trainer {
+class trainer {
     _id;
-    id_trainer;
+    id;
     nombre;
     email_personal;
     email_corporativo;
@@ -11,29 +11,29 @@ class Trainer {
     telefono_empresa;
     telefono_movil_empresarial;
     constructor() { }
-    async connect() {
+    async connection() {
         try {
-            const result = await collectionGen('trainer');
+            const result = await collGenerator('trainer');
             return result;
         } catch (error) {
             throw error;
         }
     }
-    async getAllTrainers() {
+    async getTrainers() {
         try {
-            const connection = await this.connect();
+            const connection = await this.connection();
             const result = await connection.find().toArray();
             return result;
         } catch (error) {
             throw error
         }
     }
-    async getTrainerById(id) {
+    async getTrainer(id) {
         try {
-            const connection = await this.connect();
+            const connection = await this.connection();
             const result = await connection.find(
                 {
-                    id_trainer: id
+                    id: id
                 },
                 {
                     _id: 0
@@ -46,4 +46,4 @@ class Trainer {
     }
 }
 
-export { Trainer };
+export { trainer };

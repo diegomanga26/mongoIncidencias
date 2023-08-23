@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
+import initApi from './routes/index.js';
 
-import { validateJWT, tokenJWT } from '';
 dotenv.config();
 let appExpress = express();
 

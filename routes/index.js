@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import getInit from './getRoute.js';
 
 const initApi = () => {
     const apiRouter = Router();
