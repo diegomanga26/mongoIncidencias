@@ -1,6 +1,8 @@
+
 /**
- * ! CREANDO BASE DE DATOS "db_campus_incidencias":
+ * ! DEFINICION DE AUTOINCREMENTABLES:
  */
+
 use("db_campus_incidencias");
 db.createCollection("counters");
 db.counters.insertMany([
@@ -16,6 +18,10 @@ function siguienteId(coleccion) {
     );
     return sequenceDocument.sequence_value;
 };
+
+/**
+ * ! CREANDO BASE DE DATOS "db_campus_incidencias":
+ */
 
 use("db_campus_incidencias");
 db.createCollection("trainer", {
