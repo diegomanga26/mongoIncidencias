@@ -1,4 +1,4 @@
-import * as getService from '../services/getServices.js';
+import * as getService from '../services/getService.js';
 
 export const getTrainersController = async (req, res) => {
     try {
