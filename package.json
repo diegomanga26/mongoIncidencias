@@ -18,6 +18,8 @@
     "nodemon": "3.0.1"
   },
   "dependencies": {
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.0",
     "express-routes-versioning": "^1.0.1",
     "mongodb": "5.7.0",
     "passport": "0.6.0",
